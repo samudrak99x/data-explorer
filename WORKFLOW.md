@@ -4,9 +4,54 @@ Use this workflow for every implementation in this repository.
 
 ## Core Rule
 
-Each implementation must happen on its own branch and finish as a pull request.
+Plan large work before implementation. Each implementation subtask must happen on its own branch and finish as a pull request.
 
-## Issue To PR Flow
+## AI-DLC Flow
+
+Use this lifecycle for feature work:
+
+1. Intake
+   - Capture the feature request, problem, user value, and constraints.
+   - Create or use a planning issue for the larger feature.
+2. Planning
+   - Inspect the repo before proposing architecture or tasks.
+   - Identify assumptions, risks, dependencies, and test strategy.
+   - Define acceptance criteria for the full feature.
+3. Task Breakdown
+   - Split the plan into small implementation issues.
+   - Each implementation issue should be independently reviewable.
+   - Capture dependencies between issues when order matters.
+4. Implementation
+   - Create a branch from `main` for exactly one implementation issue.
+   - Keep code changes focused on that issue.
+   - Add or update tests when the change has behavior worth protecting.
+5. Pull Request
+   - Push the branch and open a pull request into `main`.
+   - Link the implementation issue.
+   - Include verification steps and any screenshots for UI changes.
+6. Review and Merge
+   - Address review feedback on the same branch.
+   - Merge only after checks and review are complete.
+7. Learn and Iterate
+   - If the implementation reveals follow-up work, create new issues.
+   - Update documentation or workflow notes when the repo learns a better pattern.
+
+## Planning Issue Expectations
+
+A planning issue should include:
+
+- Problem statement.
+- User or business goal.
+- Proposed scope and explicit non-goals.
+- Acceptance criteria for the whole feature.
+- Technical notes from repo inspection.
+- Risks, unknowns, and dependencies.
+- Proposed implementation sub-issues.
+- Suggested validation plan.
+
+Planning issues should usually end by creating implementation issues, not by changing application code.
+
+## Implementation Issue To PR Flow
 
 1. Read the issue and confirm the goal, scope, and acceptance criteria.
 2. Inspect the current code before making changes.
@@ -47,8 +92,20 @@ Every pull request should include:
 
 ## Guardrails
 
+- Do not start implementation for large features until a planning issue exists.
+- Do not use planning branches for application code.
 - Do not mix unrelated features in one branch.
 - Do not rewrite unrelated files.
 - Do not merge directly into `main`.
 - Do not mark work complete if checks were skipped without explanation.
 
+## Suggested First Issues
+
+Use these as the starting AI-DLC breakdown for this empty repo:
+
+1. Planning: define the first version of Data Explorer.
+2. Implementation: scaffold the app.
+3. Implementation: add CSV upload and parsing.
+4. Implementation: add data preview table.
+5. Implementation: add column summary statistics.
+6. Implementation: add filtering and sorting.
