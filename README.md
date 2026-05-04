@@ -24,3 +24,5 @@ fix/7-empty-file-error
 ```
 
 Planning issues should not contain implementation code changes. Their job is to create clear, reviewable sub-issues that can move through the branch-and-PR flow independently.
+
+See [AGENT_LOOP.md](AGENT_LOOP.md) for the GitHub issue label loop that moves work from `ready` to `in-progress` to pull request review.

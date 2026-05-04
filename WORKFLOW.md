@@ -2,6 +2,8 @@
 
 Use this workflow for every implementation in this repository.
 
+For issue labels, state transitions, and the manual agent loop, also read `AGENT_LOOP.md`.
+
 ## Core Rule
 
 Plan large work before implementation. Each implementation subtask must happen on its own branch and finish as a pull request.
